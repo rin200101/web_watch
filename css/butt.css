@@ -1,0 +1,36 @@
+
+  .home__button {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 12px 18px;
+    position: relative;
+  }
+  .home__button:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(calc(100% + 4px));
+    width: 45px;
+    height: 45px;
+    background: #EEC373;
+    border-radius: 50px;
+    transition: transform .25s .25s cubic-bezier(0, 0 .5 , 2), 
+    width .25s cubic-bezier(0, 0, .5 , 2);
+    z-index: -1;
+  }
+  .home__button:hover::before{
+    width: 100%;
+    transform: translateY(-50%) translateX(-18px);
+    transition: transform .25s cubic-bezier(0, 0 .5 , 2), width .25s cubic-bezier(0, 0, .5 , 2);
+  }
+  
+  .home__button ion-icon{
+    margin-left: 5px;
+    transition: transform .25s .4 cubic-bezier(0, 0 .5 , 2);
+  }
+  .home__button:hover ion-icon{
+    transform: translateX(3px);
+  }
